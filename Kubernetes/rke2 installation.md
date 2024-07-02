@@ -21,10 +21,10 @@ sudo apt update && sudo apt upgrade -y
 
 ### Step 2: Install RKE2 on All Nodes
 
-1. **Download and Install RKE2**
+1. **Download and Install RKE2 as Server**
 
 ```sh
-curl -sfL https://get.rke2.io | sudo sh -
+curl -sfL https://get.rke2.io | | INSTALL_RKE2_TYPE=server sudo sh -
 ```
 
 2. **Enable and Start the RKE2 Server on Control Plane Nodes**
@@ -33,6 +33,7 @@ On each control plane node, enable and start the RKE2 server service.
 
 ```sh
 sudo systemctl enable rke2-server.service
+
 sudo systemctl start rke2-server.service
 ```
 
