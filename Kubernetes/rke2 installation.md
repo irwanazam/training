@@ -24,7 +24,7 @@ sudo apt update && sudo apt upgrade -y
 1. **Download and Install RKE2 as Server**
 
 ```sh
-curl -sfL https://get.rke2.io | | INSTALL_RKE2_TYPE=server sudo sh -
+curl -sfL https://get.rke2.io | INSTALL_RKE2_TYPE=server sudo sh -
 ```
 
 2. **Enable and Start the RKE2 Server on Control Plane Nodes**
@@ -88,6 +88,12 @@ sudo systemctl restart rke2-server.service
 ```
 
 ### Step 4: Configure Worker Nodes
+
+1. **Download and Install RKE2 as Agent**
+
+```sh
+curl -sfL https://get.rke2.io | INSTALL_RKE2_TYPE=agent sudo sh -
+```
 
 On each worker node, create the RKE2 configuration file `/etc/rancher/rke2/config.yaml`:
 
